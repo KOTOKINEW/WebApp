@@ -13,13 +13,13 @@ public class PersonDAO {
     {
         people = new ArrayList<>();
 
-        people.add(new Person(++PEOPLE_COUNT, "Jhonny"));
-        people.add(new Person(++PEOPLE_COUNT, "Ember"));
-        people.add(new Person(++PEOPLE_COUNT, "Tony"));
-        people.add(new Person(++PEOPLE_COUNT, "Gerold"));
-        people.add(new Person(++PEOPLE_COUNT, "Kid"));
-        people.add(new Person(++PEOPLE_COUNT, "Edvard"));
-        people.add(new Person(++PEOPLE_COUNT, "Leo"));
+        people.add(new Person(++PEOPLE_COUNT, "Jhonny", 52, "johnny@mail.ru"));
+        people.add(new Person(++PEOPLE_COUNT, "Ember", 21, "ember@mail.ru"));
+        people.add(new Person(++PEOPLE_COUNT, "Tony", 24, "tony@mail.ru"));
+        people.add(new Person(++PEOPLE_COUNT, "Gerold", 54, "gerold@mail.ru"));
+        people.add(new Person(++PEOPLE_COUNT, "Kid", 14, "kid@mail.ru"));
+        people.add(new Person(++PEOPLE_COUNT, "Edvard", 47, "edvard@mail.ru"));
+        people.add(new Person(++PEOPLE_COUNT, "Leo", 69, "leo@mail.ru"));
     }
     public List<Person> index(){
         return people;
@@ -37,6 +37,8 @@ public class PersonDAO {
     public void update(int id, Person updatedPerson){
         Person personToBeUpdated = show(id);
         personToBeUpdated.setName(updatedPerson.getName());
+        personToBeUpdated.setAge(updatedPerson.getAge());
+        personToBeUpdated.setEmail(updatedPerson.getEmail());
     }
 
     public void delete(int id){
