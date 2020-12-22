@@ -13,9 +13,9 @@
     <div style="color:red" th:if = "${#fields.hasErrors('name')}" th:errors = "*{name}" >Name error</div>
     <br/>
 
-    <label for = "personAge"> Enter age: </label>
-    <input type="text" th:field = "*{age}" age = "age">
-    <div style="color:red" th:if = "${#fields.hasErrors('age')}" th:errors = "*{age}" >Age error</div>
+    <label for="age">Enter age: </label>
+    <input type="text" th:field="*{age}" id="age"/>
+    <div style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age Error</div>
     <br/>
 
     <label for = "email">Enter email: </label>
